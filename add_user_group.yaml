@@ -1,15 +1,14 @@
 ---
 - name: create group
-  hosts: webdb
   tasks:
   - name: using group module
     group:
-      name: oracle
+      name: jsm
       state: present
       gid: 2000
 
   - name: using user module
     ansible.builtin.user:
       name: mini
-      uid: 3000
-      group: oracle
+      uid: 2000
+      group: jsm
