@@ -1,5 +1,6 @@
 ---
 - name: create group
+  hosts: db
   tasks:
   - name: using group module
     group:
